@@ -53,9 +53,9 @@ These include
 
 -Finishing comments on my code
 
-<img >
+
 <a href="https://github.com/mannysangha1/animated-spoon-second-project">Github Second Project</a>
 
-<a href="file:///Users/mannysangha/Desktop/Projects/animated-spoon-second-project/index.html">Live Website</a>
+<a href="http://127.0.0.1:5500/animated-spoon-second-project/index.html">Live Website</a>
 
 
