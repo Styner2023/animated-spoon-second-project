@@ -1,0 +1,349 @@
+*{
+  box-sizing: border-box;
+}
+
+/* Added my own colors */
+:root {
+  --primary: rgba(0, 0, 0, 0.305);
+  --secondary: rgb(255, 255, 255);
+  --tertiary: rgb(187, 62, 62);
+  --dark: rgb(75, 73, 73);
+  --light: rgb(255, 255, 255);
+  --header:rgb(0, 0, 0);
+  --navA:rgb(0, 0, 0);
+  --backgroundimg: rgb(14, 5, 5);
+  --navAhover: rgb(0, 94, 255);
+  --aboutme: rgb(0, 0, 0);
+}
+
+body {
+  margin:0;
+  padding: 0;
+  font-family:'Courier New', Courier, monospace;
+  color: var(--primary);
+  background-color: var(--light);
+  line-height: 1.5;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* Switched from flex to flow-rbox, and row to column-reverse*/
+header {
+  padding: 15px 6% 15px 0;
+  display: flexbox;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+  box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+}
+
+/* Changed the color*/
+header h1 {
+  color: var(--header);
+  padding: 5px 1% 5px 6%;
+  margin: 0;
+  font-size: 4vw;
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Changed the background image color and tinkered with the styling bit*/
+nav a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: var(--navA);
+  margin-right: 10px;
+  background-image: linear-gradient(270deg, var(--backgroundimg) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  font-size: 1.4rem;
+}
+
+/* Chnaged the color */
+nav a:hover {
+  background-size: 100% 100%;
+  color: var(--navAhover);
+}
+
+nav a:last-child {
+  margin-right: 0;
+}
+
+main {
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+
+/* Changed the text-align to the left */
+/* Inserted my own image, modified and played around with the styling*/
+.hero-banner {
+  background: rgba(255, 255, 255, 0.291);
+  background-image: url("../images/angeldu$t.jpg"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: normal;
+  min-width: 75%;
+  color: var(--light);
+  padding: 2% 6%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.hero-banner div {
+  flex: 0 0 90%;
+}
+
+.hero-banner h2 {
+  color: var(--tertiary);
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 2.3rem;
+  line-height: 1.2;
+  display: inline;
+}
+
+.page-wrapper {
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-section {
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+/* Changed the font color*/
+/* Changed the text alignment to the right */
+/* Added a border-top and border bottom */
+.page-section > h2 {
+  flex: 0 0 20%;
+  margin: right;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--primary);
+  font-size: 4vw;
+  line-height: 1.1;
+  flex-wrap: wrap;
+  display: inline ;
+  color: var(--aboutme);
+  border-top: solid;
+  border-bottom: solid;
+}
+
+/* Made a page section for h3 and changed the text-align to left*/
+/* Added a border-top and border bottom */
+.page-section > h3 {
+  flex: 0 0 20%;
+  margin: right;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--primary);
+  font-size: 4vw;
+  line-height: 1.1;
+  flex-wrap: wrap;
+  display: inline ;
+  color: var(--aboutme);
+  border-top: solid;
+  border-bottom: solid;
+}
+
+/* Made one for skills */
+.page-section > h5 {
+  flex: 0 0 20%;
+  margin: right;
+  text-align: left;
+  padding-right: 15px;
+  border-right: 4px solid var(--primary);
+  font-size: 4vw;
+  line-height: 1.1;
+  flex-wrap: wrap;
+  display: inline ;
+  color: var(--aboutme);
+  border-top: solid;
+  border-bottom: solid;
+
+}
+
+.page-section > div {
+  flex: 0 0 77%;
+  color: var(--aboutme);
+}
+
+.page-section > p {
+  margin-bottom: 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item{
+  border: 5px solid var(--secondary);
+  background-color: var(--primary);
+  color: var(--aboutme);
+  min-height: 150px;
+  min-height: 150px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+}
+
+/* feature first portfolio item */
+.flex-item:first-child {
+  min-height: 400px;
+  flex-basis: 100%;
+}
+
+.flex-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flex-item div {
+  background-color: var(--secondary);
+  padding: 8px 10px;
+}
+
+.flex-item h4 {
+  font-size: 1.6rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.contact address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.contact address a {
+  color: var(--tertiary);
+  padding: 5px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-style: normal;
+  background-image: linear-gradient(270deg, var(--primary) 0%, var(--primary) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+  margin: 0 0.2rem 0.1rem;
+  display: inline-block;
+}
+
+.contact address a:hover {
+  background-size: 100% 88%;
+  color: var(--secondary);
+}
+
+/* Portfolio project images */
+
+/* Have to resize images correctly */
+
+.image-3 {
+  background-image: url("../images/angeldu$t.jpg");
+  background-position: center;
+
+}
+
+/* end portfolio project images */
+
+@media screen and (max-width: 980px) {
+
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .page-section > h2,
+  .page-section > div {
+    flex: 0 0 100%
+  }
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 768) {
+  .flex-item,
+  .flex-item:first-child {
+    flex-basis: 100%;
+  }
+
+  .flex-item:first-child {
+    min-height: 150px;
+  }
+
+  .hero-banner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .contact address {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
+  
+
+
+
+
+
+
+
